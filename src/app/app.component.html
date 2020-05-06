@@ -20,9 +20,10 @@
     <div class="col-md-3">
       <div class="list-group">
         <a *ngFor="let mi of menuItems"
-          [href]="mi.link"
+          [routerLink]="mi.link"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
           [class.disabled]="mi.disabled"
-          [class.active]="mi.link == currentRoute"
           class="list-group-item list-group-item-action">
           {{ mi.label }} <small *ngIf="mi.disabled">(em breve)</small>
         </a>
