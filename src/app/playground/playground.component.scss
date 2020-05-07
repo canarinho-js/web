@@ -1,0 +1,33 @@
+.col-md-6 {
+  padding: 0;
+}
+.instructions {
+  padding: 20px;
+  min-height: calc(100vh - 56px);
+}
+.code-editor {
+  padding: 20px;
+  background-color: #1f1f1f;
+  min-height: 65vh;
+  .title {
+    color: #ffffff;
+  }
+  .btn {
+    margin-bottom: 5px;
+  }
+  .code-editor-plugin {
+    height: 400px;
+  }
+}
+.console-result {
+  padding: 20px;
+  min-height: calc(35vh - 56px);
+  background-color: #000000;
+  color: #15ff00;
+  .title {
+    color: #ffffff;
+  }
+  p {
+    font-family: monospace;
+  }
+}

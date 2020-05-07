@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="instructions">
+        <h3>Instruções</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quam eveniet molestiae sint laborum quos necessitatibus animi ut, adipisci quasi soluta doloremque, totam magni ullam quaerat in hic dicta voluptates!</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="code-editor">
+        <div class="row">
+          <div class="col-md-8">
+            <h5 class="title">Editor</h5>
+          </div>
+          <div class="col-md-4 text-right">
+            <button class="btn btn-outline-success btn-sm" (click)="runCode()">Rodar</button>
+          </div>
+        </div>
+        <ngx-monaco-editor class="code-editor-plugin" [options]="editorOptions" [(ngModel)]="code"></ngx-monaco-editor>
+      </div>
+      <div class="console-result">
+        <h5 class="title">Resultado</h5>
+        <p>{{ codeResult }}</p>
+      </div>
+    </div>
+  </div>
+</div>

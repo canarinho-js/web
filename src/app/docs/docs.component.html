@@ -1,0 +1,23 @@
+<br>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="list-group">
+        <a *ngFor="let mi of menuItems"
+          [routerLink]="mi.link"
+          routerLinkActive="active"
+          [class.disabled]="mi.disabled"
+          class="list-group-item list-group-item-action">
+          {{ mi.label }} <small *ngIf="mi.disabled">(em breve)</small>
+        </a>
+      </div>
+      <br>
+      <div class="alert alert-info">
+        Versão 0.0.1 
+      </div>      
+    </div>
+    <div class="col-md-9">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

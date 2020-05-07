@@ -3,38 +3,26 @@
     <img src="assets/img/canarinho.png" alt="CanarinhoJS" height="30" class="d-inline-block align-top">
     CanarinhoJS
   </a>
-  <!-- <button class="navbar-toggler" type="button">
+  <button class="navbar-toggler" type="button">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Início</a>
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="docs"
+          routerLinkActive="active">
+          Documentação
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="playground"
+          routerLinkActive="active">
+          Playground
+        </a>
       </li>
     </ul>
-  </div> -->
-</nav>
-<br>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-3">
-      <div class="list-group">
-        <a *ngFor="let mi of menuItems"
-          [routerLink]="mi.link"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-          [class.disabled]="mi.disabled"
-          class="list-group-item list-group-item-action">
-          {{ mi.label }} <small *ngIf="mi.disabled">(em breve)</small>
-        </a>
-      </div>
-      <br>
-      <div class="alert alert-info">
-        Versão 0.0.1 
-      </div>      
-    </div>
-    <div class="col-md-9">
-      <router-outlet></router-outlet>
-    </div>
   </div>
-</div>
+</nav>
+<router-outlet></router-outlet>
