@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as canarinho from 'canarinho';
+import { traduzir_para_js } from 'canarinho';
 
 @Component({
   selector: 'app-playground',
@@ -10,10 +10,10 @@ export class PlaygroundComponent implements OnInit {
 
   public editorOptions = {
     theme: 'vs-dark',
-    language: 'javascript',
+    language: 'canarinho',
     minimap: {enabled: false }
   };
-  public code = 'function x() {\nconsole.log("Hello world!");\n}';
+  public code = 'função minha_primeira_funcao() {\n\tretornar "Olá mundo";\n}\n\nminha_primeira_funcao();';
   public codeResult = '';
 
   public constructor() { }
@@ -21,8 +21,8 @@ export class PlaygroundComponent implements OnInit {
   public ngOnInit(): void { }
 
   public runCode() {
-    // const jsCode = canarinho.traduzir_para_js(this.code);
-    // this.codeResult = eval(this.code);
+    const jsCode = traduzir_para_js(this.code);
+    this.codeResult = eval(jsCode);
   }
 
 }
