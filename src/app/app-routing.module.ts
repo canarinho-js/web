@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './docs/pages/home/home.component';
-import { HowItWorksComponent } from './docs/pages/how-it-works/how-it-works.component';
 import { SetupComponent } from './docs/pages/setup/setup.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DocsComponent } from './docs/docs.component';
@@ -18,7 +17,6 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'introducao', pathMatch: 'full'},
       { path: 'introducao', component: HomeComponent },
-      { path: 'como-funciona', component: HowItWorksComponent },
       { path: 'instalacao', component: SetupComponent },
       { path: 'dicionario', component: DictionaryComponent },
       { path: 'funcoes', component: FunctionsComponent },

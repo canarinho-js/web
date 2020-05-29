@@ -1,3 +1,68 @@
 <h2>Instalação</h2>
 <hr>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis excepturi facere optio quisquam sit natus alias cumque deserunt fugit molestias, aliquid sed ducimus dicta iusto exercitationem pariatur officia ipsa laborum.</p>
+
+<p>
+  Para iniciar a instalação, é esperado que você tenha 
+  instalado o <a href="https://www.npmjs.com/get-npm" target="_blank">NPM</a>.
+  Ele lhe ajudará a gerenciar pacotes em JavaScript.
+</p>
+
+<h4>Instalando o Canarinho</h4>
+<pre>
+  <code>
+    npm install canarinho
+  </code>
+</pre>
+
+<h4>Instalando o CanarinhoCLI</h4>
+<pre>
+  <code>
+    npm install -g canarinho
+  </code>
+</pre>
+
+<hr>
+
+<h4>Exemplo simples</h4>
+
+Suponha que existe um arquivo chamado exemplo.cnr, com o seguinte conteúdo:
+<pre>
+  <code>
+    imprimir("Olá mundo")
+  </code>
+</pre>
+
+É possível realizar a sua transpilação para JavaScript através do comando abaixo:
+<pre>
+  <code>
+    $ canarinho exemplo.cnr
+  </code>
+</pre>
+
+Como resultado, o arquivo exemplo.cnr.js será criado:
+<pre>
+  <code>
+    console.log("Olá mundo")
+  </code>
+</pre>
+
+<hr>
+
+<h4>Manual do transpilador</h4>
+<pre>
+  Comando:
+  
+    canarinho [opções] caminho_relativo
+  
+  Opções:
+  
+    -i    tradução inversa, ou seja, do javascript ao canarinho
+    -r    tradução recursiva (necessário se o caminho for uma pasta)
+  
+  Exemplos:
+  
+    canarinho arquivo.cnr         gera um arquivo em javascript equivalente ao arquivo.cnr
+    canarinho -i arquivo.js       gera um arquivo em canarinho equivalente ao arquivo.js
+    canarinho -r pasta/           gera arquivos javascript equivalentes aos arquivos canarinho da pasta
+    canarinho -i -r pasta/        gera arquivos canarinho equivalentes aos arquivos javascript da pasta
+</pre>

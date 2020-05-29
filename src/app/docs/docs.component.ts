@@ -14,24 +14,19 @@ export class DocsComponent {
       disabled: false
     },
     {
-      label: 'Como funciona',
-      link: 'como-funciona',
-      disabled: true
-    },
-    {
       label: 'Instalação',
       link: 'instalacao',
-      disabled: true
+      disabled: false
     },
     {
       label: 'Dicionário',
       link: 'dicionario',
-      disabled: true
+      disabled: false
     },
     {
       label: 'Funções',
       link: 'funcoes',
-      disabled: true
+      disabled: false
     },
     {
       label: 'Plugin VSCode',

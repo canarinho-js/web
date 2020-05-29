@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './docs/pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HowItWorksComponent } from './docs/pages/how-it-works/how-it-works.component';
 import { SetupComponent } from './docs/pages/setup/setup.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DocsComponent } from './docs/docs.component';
@@ -20,7 +19,6 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     HomeComponent,
-    HowItWorksComponent,
     SetupComponent,
     PageNotFoundComponent,
     DocsComponent,

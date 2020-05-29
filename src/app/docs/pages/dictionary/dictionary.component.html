@@ -1,3 +1,15 @@
 <h2>Dicionário</h2>
 <hr>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis excepturi facere optio quisquam sit natus alias cumque deserunt fugit molestias, aliquid sed ducimus dicta iusto exercitationem pariatur officia ipsa laborum.</p>
+<p>Abaixo pode ser observado o dicionário de comandos do Canarinho com suas equivalências em Javascript.
+   Isto pode ser útil para pessoas que já têm experiência com outras linguagem de programação ou até mesmo JS.
+</p>
+<table class="table">
+  <tr>
+    <th>Canarinho</th>
+    <th>JS</th>
+  </tr>
+  <tr *ngFor="let item of dictionary">
+    <td>{{ item.can }}</td>
+    <td>{{ item.js }}</td>
+  </tr>
+</table>
