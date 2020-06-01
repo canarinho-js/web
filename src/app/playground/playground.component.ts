@@ -10,7 +10,7 @@ import axios from 'axios';
 export class PlaygroundComponent implements OnInit {
 
   public editorOptions = {
-    theme: 'vs-dark',
+    theme: 'temaCanarinho',
     language: 'canarinho',
     minimap: {enabled: false }
   };

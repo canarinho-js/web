@@ -32,7 +32,38 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    MonacoEditorModule.forRoot()
+    MonacoEditorModule.forRoot({
+      onMonacoLoad: () => {
+        const monaco = (<any>window).monaco
+        monaco.languages.register({ id: 'canarinho' });
+
+        monaco.languages.setMonarchTokensProvider('canarinho', {
+          tokenizer: {
+            root: [
+              [/(se|ou então|senão|enquanto|verificar|parar|retornar)/, "control"],
+              [/(caso seja|em caso inesperado)/, "control.less"],
+              [/(classe|construtor|variável)/, "variable"],
+              [/(método|estático|função|\)|\()/, "function"],
+              [/(instanciar|instância)/, "new"],
+              [/(\+|\-|\*|\{|\}|\$|\/|\%|\=|\>|\;|\<)/, "arithmetic"],
+            ]
+          }
+        });
+
+        monaco.editor.defineTheme('temaCanarinho', {
+          base: 'vs-dark',
+          inherit: true,
+          rules: [
+            { token: 'control', foreground: 'a95b71' },
+            { token: 'control.less', foreground: 'ff0000', fontStyle: 'bold' },
+            { token: 'variable', foreground: '85d0fa' },
+            { token: 'function', foreground: 'd4d3a2' },
+            { token: 'new', foreground: '008800' },
+            { token: 'arithmetic', foreground: '4187bd' },
+          ]
+        });
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
