@@ -55,10 +55,10 @@ import { FormsModule } from '@angular/forms';
           inherit: true,
           rules: [
             { token: 'control', foreground: 'a95b71' },
-            { token: 'control.less', foreground: 'ff0000', fontStyle: 'bold' },
-            { token: 'variable', foreground: '85d0fa' },
+            { token: 'control.less', foreground: '9a6f73' },
+            { token: 'variable', foreground: '85d0fa', fontStyle: 'bold' },
             { token: 'function', foreground: 'd4d3a2' },
-            { token: 'new', foreground: '008800' },
+            { token: 'new', foreground: 'a95b71' },
             { token: 'arithmetic', foreground: '4187bd' },
           ]
         });
