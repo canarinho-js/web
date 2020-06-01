@@ -20,7 +20,10 @@
       </div>
       <div class="console-result">
         <h5 class="title">Resultado</h5>
-        <p>{{ codeResult }}</p>
+        <p *ngFor="let line of codeOutput">💬 {{ line }}</p>
+        <p *ngIf="codeResult">
+          <b>👉 </b>{{ codeResult }}
+        </p>
       </div>
     </div>
   </div>
