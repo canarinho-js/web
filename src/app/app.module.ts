@@ -14,6 +14,8 @@ import { DictionaryComponent } from './docs/pages/dictionary/dictionary.componen
 import { FunctionsComponent } from './docs/pages/functions/functions.component';
 import { MonacoEditorModule } from 'ngx-monaco-editor';
 import { FormsModule } from '@angular/forms';
+import { MarkdownModule } from 'ngx-markdown';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
+    MarkdownModule.forRoot({ loader: HttpClient }),
     MonacoEditorModule.forRoot({
       onMonacoLoad: () => {
         const monaco = (<any>window).monaco

@@ -1,0 +1,7 @@
+variável texto = 'Este é meu texto';
+
+variável numeroInteiro = 10;
+
+variável numeroDecimal = 0.5;
+
+variável meuBooleano = verdadeiro;

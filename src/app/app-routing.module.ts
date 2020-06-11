@@ -23,7 +23,11 @@ const routes: Routes = [
       { path: 'plugin-vscode', component: PluginVSCodeComponent },
     ]
   },
-  { path: 'playground', component: PlaygroundComponent },
+  { path: 'playground', component: PlaygroundComponent,
+    children: [
+      { path: 'variaveis', component: PlaygroundComponent },
+    ]
+  },
   { path: '**', component: PageNotFoundComponent },
 ];
 

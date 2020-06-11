@@ -1,0 +1,7 @@
+função somar(a, b) {
+  retornar a + b;
+}
+
+variável minhaSoma = somar(2, 4);
+
+imprimir(minhaSoma);

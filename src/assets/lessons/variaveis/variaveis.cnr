@@ -1,0 +1,3 @@
+variável meuNumero = 10;
+
+imprimir(meuNumero);

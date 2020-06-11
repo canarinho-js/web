@@ -1,0 +1,11 @@
+variável primeiroNumero = 1;
+
+variável calculo = primeiroNumero + 4;
+
+se (calculo === 7) {
+  imprimir('Encontramos 7');
+} ou então (calculo === 5) {
+  imprimir('Achamos o 5');
+} senão {
+  imprimir('O resultado na verdade é ' + (primeiroNumero + 4));
+}

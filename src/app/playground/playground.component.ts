@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { traduzir_para_js } from 'canarinho';
-import axios from 'axios';
+import { HttpClient } from '@angular/common/http';
+import lessons from './lessons';
 
 @Component({
   selector: 'app-playground',
@@ -12,24 +13,53 @@ export class PlaygroundComponent implements OnInit {
   public editorOptions = {
     theme: 'temaCanarinho',
     language: 'canarinho',
-    minimap: {enabled: false }
+    minimap: { enabled: false }
   };
-  public code = 'função somar(a, b) {\n\timprimir(`Calculando a soma de ${a} com ${b}`);\n\tretornar a + b;\n}\n\nsomar(1, 2);\n';
-  public codeResult = '';
-  public codeOutput = [];
 
-  public constructor() { }
+  public code = {
+    result: '',
+    output: []
+  };
 
-  public ngOnInit(): void { }
+  public currentLesson = {
+    label: '',
+    link: '',
+    text: '',
+    code: '',
+  };
 
-  public runCode() {
-    const jsCode = traduzir_para_js(this.code);
+  public lessons = [];
 
-    axios.get(`https://gaiola.herokuapp.com/saida/${jsCode}`)
-         .then(response => {
-           this.codeResult = response.data.retorno
-           this.codeOutput = response.data.impressoes
-         })
+  public constructor(private http: HttpClient) { }
+
+  public ngOnInit(): void {
+    this.loadLessons();
+    this.currentLesson = this.lessons[0];
+  }
+
+  public loadLessons() {
+    lessons.forEach(lesson => {
+      this.http.get(lesson.code, {responseType: 'text'}).subscribe(data => lesson.code = data);
+      this.lessons.push(lesson);
+    });
+  }
+
+  public selectLesson(lesson: any): void {
+    this.currentLesson = lesson;
+  }
+
+  public runCode(): void {
+    const jsCode = traduzir_para_js(this.currentLesson.code);
+
+    this.http.post('https://gaiola.herokuapp.com/saida', { jsCode })
+      .subscribe((res: any) => {
+        this.setCodeResult(res.retorno, res.impressoes)
+      });
+  }
+
+  public setCodeResult(returns: string, prints: []): void {
+    this.code.result = returns;
+    this.code.output = prints;
   }
 
 }
