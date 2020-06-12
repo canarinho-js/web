@@ -1,11 +1,11 @@
-variável operSoma = 10 + 5;
-imprimir('Adição: ' + operSoma);
+variável soma = 10 + 5;
+imprimir('Adição: ' + soma);
 
-variável operSubtrai = 10 - 5;
-imprimir('Subtração: ' + operSubtrai);
+variável subtracao = 10 - 5;
+imprimir('Subtração: ' + subtracao);
 
-variável operMultiplica = 10 * 5;
-imprimir('Multiplicação: ' + operMultiplica);
+variável multiplicacao = 10 * 5;
+imprimir('Multiplicação: ' + multiplicacao);
 
-variável operDivide = 10 / 5;
-imprimir('Divisão: ' + operDivide);
+variável divisao = 10 / 5;
+imprimir('Divisão: ' + divisao);
