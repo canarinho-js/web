@@ -2,13 +2,14 @@ Para declarar valores você deve usar o que chamamos de variáveis.
 
 Uma variável deve ser criada para que possamos usar e modificar o valor da mesma chamando sempre o mesmo nome.
 
-Por exemplo:
+Exemplo de declaração:
 ```
 variável nomeDaVariavel;
 
 nomeDaVariavel = 10;
 ```
-Ou:
+
+Forma alternativa, mais abreviada:
 ```
 variável nomeDaVariavel = 10;
 ```
@@ -23,3 +24,5 @@ nomeDaVariavel = 0.5;
 
 nomeDaVariavel = funcaoQualquer();
 ```
+
+Aprenda mais, na próxima seção, sobre os tipos de dados que as variáveis podem armazenar :-)
