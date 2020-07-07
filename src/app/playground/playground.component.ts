@@ -37,15 +37,21 @@ export class PlaygroundComponent implements OnInit {
     this.currentLesson = this.lessons[0];
   }
 
-  public loadLessons() {
+  public loadLessons(): void {
     lessons.forEach(lesson => {
-      this.http.get(lesson.code, {responseType: 'text'}).subscribe(data => lesson.code = data);
+      this.http.get(lesson.code, {
+        responseType: 'text',
+        headers: {
+          'Content-Type': 'text/plain'
+        }
+      }).subscribe(data => lesson.code = data);
       this.lessons.push(lesson);
     });
   }
 
   public selectLesson(lesson: any): void {
     this.currentLesson = lesson;
+    this.resetCode();
   }
 
   public runCode(): void {
@@ -53,8 +59,15 @@ export class PlaygroundComponent implements OnInit {
 
     this.http.post('https://gaiola.herokuapp.com/saida', { jsCode })
       .subscribe((res: any) => {
-        this.setCodeResult(res.retorno, res.impressoes)
+        this.setCodeResult(res.retorno, res.impressoes);
       });
+  }
+
+  public resetCode(): void {
+    this.code = {
+      result: '',
+      output: []
+    };
   }
 
   public setCodeResult(returns: string, prints: []): void {
