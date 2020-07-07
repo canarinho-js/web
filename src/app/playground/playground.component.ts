@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { traduzir_para_js } from 'canarinho';
 import { HttpClient } from '@angular/common/http';
-import lessons from './lessons';
+import lessonsFile from './lessons';
 
 @Component({
   selector: 'app-playground',
@@ -26,6 +26,7 @@ export class PlaygroundComponent implements OnInit {
     link: '',
     text: '',
     code: '',
+    codeContent: ''
   };
 
   public lessons = [];
@@ -34,18 +35,26 @@ export class PlaygroundComponent implements OnInit {
 
   public ngOnInit(): void {
     this.loadLessons();
-    this.currentLesson = this.lessons[0];
   }
 
   public loadLessons(): void {
-    lessons.forEach(lesson => {
-      this.http.get(lesson.code, {
-        responseType: 'text',
-        headers: {
-          'Content-Type': 'text/plain'
-        }
-      }).subscribe(data => lesson.code = data);
-      this.lessons.push(lesson);
+    let count = 0;
+    lessonsFile.forEach(lesson => {
+      this.http
+        .get(lesson.code, {
+          responseType: 'text',
+          headers: {
+            'Content-Type': 'text/plain'
+          }
+        })
+        .subscribe(data => {
+          lesson.codeContent = data;
+          this.lessons.push(lesson);
+          count++;
+          if (count === lessonsFile.length) {
+            this.currentLesson = this.lessons[0];
+          }
+        });
     });
   }
 
@@ -55,7 +64,7 @@ export class PlaygroundComponent implements OnInit {
   }
 
   public runCode(): void {
-    const jsCode = traduzir_para_js(this.currentLesson.code);
+    const jsCode = traduzir_para_js(this.currentLesson.codeContent);
 
     this.http.post('https://gaiola.herokuapp.com/saida', { jsCode })
       .subscribe((res: any) => {

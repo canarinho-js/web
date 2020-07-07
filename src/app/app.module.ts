@@ -44,7 +44,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
         monaco.languages.setMonarchTokensProvider('canarinho', {
           tokenizer: {
             root: [
-              [/(se|ou então|senão|enquanto|verificar|parar|retornar)/, "control"],
+              [/(ou então|senão|se|enquanto|verificar|parar|retornar)/, "control"],
               [/(caso seja|em caso inesperado)/, "control.less"],
               [/(classe|construtor|variável)/, "variable"],
               [/(método|estático|função|\)|\()/, "function"],

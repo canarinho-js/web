@@ -32,12 +32,6 @@ export default
     code: `${path}/condicionais/condicionais.cnr`,
   },
   {
-    label: 'Laços',
-    link: 'lacos',
-    text: `${path}/lacos/lacos.md`,
-    code: `${path}/lacos/lacos.cnr`,
-  },
-  {
     label: 'Funções',
     link: 'funcoes',
     text: `${path}/funcoes/funcoes.md`,

@@ -8,16 +8,16 @@
             (click)="selectLesson(lesson)"
             routerLinkActive="active"
             class="list-group-item list-group-item-action">
-            {{ lesson.label }}
+            {{ lesson?.label }}
           </a>
         </div>
       </div>
     </div>
     <div class="col-md-5 no-padding">
       <div class="instructions">
-        <h1>{{ currentLesson.label }}</h1>
+        <h1>{{ currentLesson?.label }}</h1>
         <hr>
-        <markdown [src]="currentLesson.text"></markdown>
+        <markdown [src]="currentLesson?.text"></markdown>
       </div>
     </div>
     <div class="col-md-5 no-padding">
@@ -31,7 +31,7 @@
               <button class="btn btn-outline-success btn-sm" (click)="runCode()">Executar</button>
             </div>
           </div>
-          <ngx-monaco-editor class="code-editor-plugin" [options]="editorOptions" [(ngModel)]="currentLesson.code"></ngx-monaco-editor>
+          <ngx-monaco-editor *ngIf="currentLesson" class="code-editor-plugin" [options]="editorOptions" [(ngModel)]="currentLesson.codeContent"></ngx-monaco-editor>
         </div>
         <div class="console-result">
           <h5 class="title">Resultado</h5>
