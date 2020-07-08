@@ -2,8 +2,8 @@
 <hr>
 <p>Abaixo segue uma lista de comandos e funções disponíveis no Canarinho, juntamente com uma breve explicação do seu propósito.</p>
 
-<!-- separar por ambitos -->
-<h4>Funções de console</h4>
+<h4>Console</h4>
+<p class="text-muted">Funções que interagem com o console.</p>
 <div class="card">
   <div class="card-body">
     <h4><code>imprimir(X)</code></h4>
@@ -12,18 +12,42 @@
     <p>Equivalente ao <code>console.log</code> no javascript.</p>
   </div>
 </div>
+<div class="card">
+  <div class="card-body">
+    <h4><code>info(X)</code></h4>
+    <p>Imprime uma informação X no console/terminal.</p>
+    <hr>
+    <p>Equivalente ao <code>console.info</code> no javascript.</p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h4><code>aviso(X)</code></h4>
+    <p>Imprime um alerta X no console/terminal.</p>
+    <hr>
+    <p>Equivalente ao <code>console.warn</code> no javascript.</p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h4><code>erro(X)</code></h4>
+    <p>Imprime um erro X no console/terminal.</p>
+    <hr>
+    <p>Equivalente ao <code>console.error</code> no javascript.</p>
+  </div>
+</div>
 <br>
-<h4>Funções de texto</h4>
+<h4>Texto</h4>
+<p class="text-muted">Funções que manipulam textos.</p>
 <div class="card">
   <div class="card-body">
     <h4><code>em_maiúsculo()</code></h4>
     <p>Torna maiúsculas todas a letras de um texto.</p>
-    <p>Exemplo: <code>'Texto'.em_minúsculo()</code> retornará <code>'TEXTO'</code></p>
+    <p>Exemplo: <code>'Texto'.em_maiúsculo()</code> retornará <code>'TEXTO'</code></p>
     <hr>
     <p>Equivalente ao <code>toUpperCase</code> no javascript.</p>
   </div>
 </div>
-<br>
 <div class="card">
   <div class="card-body">
     <h4><code>em_minúsculo()</code></h4>
@@ -31,5 +55,113 @@
     <p>Exemplo: <code>'Texto'.em_minúsculo()</code> retornará <code>'texto'</code></p>
     <hr>
     <p>Equivalente ao <code>toLowerCase</code> no javascript.</p>
+  </div>
+</div>
+<br>
+<h4>Matemática</h4>
+<p class="text-muted">Todas funções que auxiliam em cálculos matemáticos.</p>
+<div class="card">
+  <div class="card-body">
+    <h4><code>arredonda(X)</code></h4>
+    <p>Arredonda um valor X para o número inteiro mais próximo.</p>
+    <p>Exemplo: <code>arredonda(0.6)</code> retornará <code>1</code></p>
+    <hr>
+    <p>Equivalente ao <code>Math.round</code> no javascript.</p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h4><code>teto(X)</code></h4>
+    <p>Arredonda um valor X para o maior número inteiro mais próximo.</p>
+    <p>Exemplo: <code>teto(1.5)</code> retornará <code>2</code></p>
+    <hr>
+    <p>Equivalente ao <code>Math.ceil</code> no javascript.</p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h4><code>base(X)</code></h4>
+    <p>Arredonda um valor X para o menor número inteiro mais próximo.</p>
+    <p>Exemplo: <code>base(1.5)</code> retornará <code>1</code></p>
+    <hr>
+    <p>Equivalente ao <code>Math.floor</code> no javascript.</p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h4><code>aleatório()</code></h4>
+    <p>Retorna um número aleatório de 0 a 1.</p>
+    <p>Exemplo: <code>aleatório()</code> retornará <code>0.4937254307924097</code></p>
+    <hr>
+    <p>Equivalente ao <code>Math.random</code> no javascript.</p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h4><code>tangente(X)</code></h4>
+    <p>Retorna a tangente de um número X.</p>
+    <p>Exemplo: <code>tangente(2)</code> retornará <code>-2.185039863261519</code></p>
+    <hr>
+    <p>Equivalente ao <code>Math.tan</code> no javascript.</p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h4><code>seno(X)</code></h4>
+    <p>Retorna o seno de um número X.</p>
+    <p>Exemplo: <code>seno(2)</code> retornará <code>0.9092974268256817</code></p>
+    <hr>
+    <p>Equivalente ao <code>Math.sin</code> no javascript.</p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h4><code>coseno(X)</code></h4>
+    <p>Retorna a coseno de um número X.</p>
+    <p>Exemplo: <code>coseno(2)</code> retornará <code>-0.4161468365471424</code></p>
+    <hr>
+    <p>Equivalente ao <code>Math.cos</code> no javascript.</p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h4><code>potência(X, Y)</code></h4>
+    <p>Retorna a potência de um número X elevado a um número Y.</p>
+    <p>Exemplo: <code>potência(2, 3)</code> retornará <code>8</code></p>
+    <hr>
+    <p>Equivalente ao <code>Math.pow</code> no javascript.</p>
+  </div>
+</div>
+<br>
+<h4>Matemática avançada e Física</h4>
+<p class="text-muted">Requere a importação da dependência 'fisica' ou 'matematica'.</p>
+<div class="card">
+  <div class="card-body">
+    <h4><code>bhaskara(A, B, C)</code></h4>
+    <p>Retorna o resultado do cálculo de Bhaskara usando os números A, B e C.</p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h4><code>hipotenusa(cateto_oposto, cateto_adjacente)</code></h4>
+    <p>Retorna o resultado do cálculo da hipotenusa usando as medidas dos catetos.</p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h4><code>velocidade(velocidade_inicial, aceleracao, tempo)</code></h4>
+    <p>Retorna o resultado do cálculo da velocidade usando as medidas de velocidade inicial, aceleração e tempo.</p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h4><code>velocidade_media(espaco, tempo)</code></h4>
+    <p>Retorna o resultado do cálculo da velocidade média usando as medidas de espaço e tempo.</p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h4><code>posicao_final(posicao_inicial, velocidade, tempo)</code></h4>
+    <p>Retorna o resultado do cálculo da posição final usando as medidas de posição inicial, velocidade, tempo.</p>
   </div>
 </div>

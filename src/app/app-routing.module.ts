@@ -20,7 +20,7 @@ const routes: Routes = [
       { path: 'instalacao', component: SetupComponent },
       { path: 'dicionario', component: DictionaryComponent },
       { path: 'funcoes', component: FunctionsComponent },
-      { path: 'plugin-vscode', component: PluginVSCodeComponent },
+      { path: 'extensao-vscode', component: PluginVSCodeComponent },
     ]
   },
   { path: 'playground', component: PlaygroundComponent,

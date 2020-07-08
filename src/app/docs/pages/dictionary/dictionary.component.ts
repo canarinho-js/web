@@ -69,10 +69,6 @@ export class DictionaryComponent implements OnInit {
       js: 'while'
     },
     {
-      can: 'imprimir',
-      js: 'console.log'
-    },
-    {
       can: 'importar',
       js: 'require'
     },
@@ -96,6 +92,54 @@ export class DictionaryComponent implements OnInit {
       can: 'falso',
       js: 'false'
     },
+    {
+      can: 'imprimir',
+      js: 'console.log'
+    },
+    {
+      can: 'info',
+      js: 'console.info'
+    },
+    {
+      can: 'erro',
+      js: 'console.error'
+    },
+    {
+      can: 'aviso',
+      js: 'console.warn'
+    },
+    {
+      can: 'arredonda',
+      js: 'Math.round'
+    },
+    {
+      can: 'teto',
+      js: 'Math.ceil'
+    },
+    {
+      can: 'base',
+      js: 'Math.floor'
+    },
+    {
+      can: 'aleatório',
+      js: 'Math.random'
+    },
+    {
+      can: 'tangente',
+      js: 'Math.tan'
+    },
+    {
+      can: 'seno',
+      js: 'Math.sin'
+    },
+    {
+      can: 'coseno',
+      js: 'Math.cos'
+    },
+    {
+      can: 'potência',
+      js: 'Math.pow'
+    }
   ];
 
   constructor() { }

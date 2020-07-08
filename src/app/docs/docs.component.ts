@@ -29,10 +29,9 @@ export class DocsComponent {
       disabled: false
     },
     {
-      label: 'Plugin VSCode',
-      link: 'plugin-vscode',
-      disabled: true
+      label: 'Extensão VSCode',
+      link: 'extensao-vscode',
+      disabled: false
     },
   ];
-
 }
