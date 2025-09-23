@@ -66,7 +66,7 @@ export class PlaygroundComponent implements OnInit {
   public runCode(): void {
     const jsCode = traduzir_para_js(this.currentLesson.codeContent);
 
-    this.http.post('https://gaiola.herokuapp.com/saida', { jsCode })
+    this.http.post('https://gaiola.unze.com.br/saida', { jsCode })
       .subscribe((res: any) => {
         this.setCodeResult(res.retorno, res.impressoes);
       });
